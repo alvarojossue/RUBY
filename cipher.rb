@@ -1,4 +1,4 @@
-def solve_cipher(input, shift)
+def solve_cipher(input, shift = -3)
  	input.downcase.chars.map do |item|
      	message = item.ord + shift
      	if item.chr == " "
@@ -13,4 +13,4 @@ def solve_cipher(input, shift)
  	end.join
 end
 
-solve_cipher("p| uhdo qdph lv grqdog gxfn", -3)
+solve_cipher("p| uhdo qdph lv grqdog gxfn")
