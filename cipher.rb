@@ -1,8 +1,9 @@
-def solve_cipher(input)
-	shift = -1
+def solve_cipher(input, shift)
  	input.downcase.chars.map do |item|
      	message = item.ord + shift
-     	if message < 97
+     	if item.chr == " "
+     	    " "
+     	elsif message < 97
      		message = (message + 26).chr
      	elsif message > 122
      		message = 122.chr
@@ -12,4 +13,4 @@ def solve_cipher(input)
  	end.join
 end
 
-solve_cipher("ifmmp")
+solve_cipher("p| uhdo qdph lv grqdog gxfn", -3)
